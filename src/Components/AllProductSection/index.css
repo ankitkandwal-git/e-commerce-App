@@ -1,0 +1,15 @@
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.products-heading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    margin-left: 190px;
+}

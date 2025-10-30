@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import Home from './Components/Home'
+import LoginPage from "./Components/LoginPage";
+import Cart from './Components/Cart'
+import Product from "./Components/Product";
+import ProtectedRoute from "./Components/ProtectedRoute";
+import NotFound from "./Components/NotFound";
+const App = () =>(
+  <BrowserRouter>
+     <Routes>
+            {/* public route */}
+            <Route path="/login" element={<LoginPage />} />
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+            {/* protected routes grouped under parent ProtectedRoute (Outlet) */}
+            <Route element={<ProtectedRoute />}> 
+               <Route path="/" element={<Home />} />
+               <Route path="/products" element={<Product />} />
+               <Route path="/cart" element={<Cart />} />
+            </Route>
+
+            {/* fallback */}
+            <Route  element={<NotFound />} />
+     </Routes>
+  </BrowserRouter>
+)
 
 export default App;
