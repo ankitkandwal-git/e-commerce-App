@@ -1,0 +1,14 @@
+.register-prime-image{
+    width: 150px;
+    height: 150px;
+}
+.products-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    padding-right: 0;
+    margin-right: 0;
+}

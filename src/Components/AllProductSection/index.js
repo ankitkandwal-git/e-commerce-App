@@ -36,7 +36,7 @@ class AllProductSection extends Component{
                 productsList: updatedData,
                 isLoading : false
             })
-        }
+        } 
     }
     renderProductSection = () =>{
         const {productsList} = this.state 

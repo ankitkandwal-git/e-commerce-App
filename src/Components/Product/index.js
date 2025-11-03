@@ -1,16 +1,13 @@
 import Header from '../Header'
 import AllProductSection from '../AllProductSection'
 import './index.css'
+import PrimeDealSection from '../PrimeDealsSection'
 
 const Products = () => (
   <>
     <Header />
     <div className="products-container">
-      {/* <img
-        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-img.png"
-        alt="products"
-        className="products-img"
-      /> */}
+      <PrimeDealSection />
       <AllProductSection />
     </div>
   </>

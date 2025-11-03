@@ -1,8 +1,13 @@
 import './index.css'
 
-const ProductCart = props =>{
-    const {productDetails} = props 
-    const {title,brand,price,rating,imageUrl} = productDetails
+const ProductCart = props => {
+  const {productDetails} = props
+
+  if (!productDetails) {
+    return null
+  }
+
+  const {title, brand, price, rating, imageUrl} = productDetails
     return(
         <li className="product-item">
       <img src={imageUrl} alt="product" className="thumbnail" />
